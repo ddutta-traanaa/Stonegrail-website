@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stone Grail — Changing the world, one business idea at a time</title>
+  <meta name="description" content="Stone Grail is a global consulting and innovation firm combining technology-driven expertise, AI-driven implementation, business strategy, and solution architecture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['Sora','system-ui','sans-serif'], sans: ['Sora','system-ui','sans-serif'] },
+          colors: {
+            bg: '#FAFAF7', surface: '#FFFFFF', ink: '#0B1220', body: '#334155', muted: '#64748B',
+            line: '#E6E8EE', accent: '#4F46E5', accentSoft: '#EEF2FF', warm: '#F59E0B'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-sans bg-bg text-body antialiased selection:bg-accent selection:text-white">
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white border-b border-line">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="flex h-24 items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="logo.png" alt="Stone Grail logo" class="h-16 w-16 object-contain" />
+          <span class="font-display text-xl font-semibold tracking-tight text-ink">Stone Grail</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-base font-medium text-muted">
+          <a href="#about" class="hover:text-ink transition">About</a>
+          <a href="#services" class="hover:text-ink transition">Services</a>
+          <a href="#contact" class="hover:text-ink transition">Contact</a>
+        </nav>
+        <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent transition">
+          Talk to us
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <button id="menuBtn" class="md:hidden p-2 text-ink" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden border-t border-line py-4 flex flex-col gap-3 text-base font-medium text-muted">
+        <a href="#about" class="hover:text-ink">About</a>
+        <a href="#services" class="hover:text-ink">Services</a>
+        <a href="#contact" class="hover:text-ink">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative min-h-screen flex items-center py-24 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 left-1/4 h-[500px] w-[500px] rounded-full bg-accent/10 blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-warm/10 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.35]" style="background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 28px 28px;"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center max-w-7xl mx-auto">
+        <h1 class="font-display text-[3.75rem] md:text-[5.625rem] font-bold leading-[1.0] tracking-tight text-ink">
+          Changing the world,<br/>
+          <span class="text-accent text-[4.5rem] md:text-[6.75rem]">one business idea</span><br/>
+          at a time.
+        </h1>
+        <p class="mt-6 text-[1.44rem] font-bold text-body tracking-widest">Global ambition. Precision execution. Real-world impact.</p>
+        <p class="mt-4 max-w-3xl mx-auto text-base leading-relaxed text-muted">
+          We operate at the intersection of technology, business strategy, and intelligent innovation — building scalable, future-ready enterprises.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white hover:bg-accent transition shadow-lg shadow-ink/10">
+            Talk to Our Strategy Team
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink hover:border-ink transition">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="min-h-screen flex items-center py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-6 text-center">
+      <p class="text-base font-semibold uppercase tracking-[0.2em] text-accent">About Us</p>
+      <h2 class="mt-3 font-display text-4xl md:text-6xl font-bold leading-tight text-ink">
+        We operate where technology, strategy, and <span class="text-accent">intelligent innovation meet</span><span class="text-accent text-[1.3em] leading-none">.</span>
+      </h2>
+      <div class="mt-6 h-px w-16 bg-accent mx-auto"></div>
+      <p class="mt-8 text-lg leading-relaxed text-body">
+        Stone Grail is a global consulting and innovation firm combining technology-driven expertise, AI-driven implementation, business strategy, and solution architecture to build scalable, future-ready enterprises.
+      </p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="rounded-2xl bg-bg p-5 border border-line">
+          <div class="font-display text-xl font-semibold text-ink">Technology</div>
+          <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-muted">Driven expertise</div>
+        </div>
+        <div class="rounded-2xl bg-bg p-5 border border-line">
+          <div class="font-display text-xl font-semibold text-ink">AI</div>
+          <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-muted">Implementation</div>
+        </div>
+        <div class="rounded-2xl bg-bg p-5 border border-line">
+          <div class="font-display text-xl font-semibold text-ink">Strategy</div>
+          <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-muted">Business &amp; growth</div>
+        </div>
+        <div class="rounded-2xl bg-bg p-5 border border-line">
+          <div class="font-display text-xl font-semibold text-ink">Architecture</div>
+          <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-muted">Solution design</div>
+        </div>
+      </div>
+      <blockquote class="mt-8 border-l-4 border-accent pl-6 py-2">
+        <div class="text-base font-semibold uppercase tracking-[0.2em] text-accent">Our belief</div>
+        <p class="mt-3 font-display text-[1.66rem] italic leading-snug text-ink">
+          <span class="text-[3.99rem] leading-none align-top text-ink/30 mr-2">"</span><span class="font-bold text-[2.7rem] not-italic text-accent">Transformation</span> is not about tools — it is intelligent system design driven by <span class="font-bold text-[2.7rem] not-italic text-accent">great minds</span><span class="text-[3.99rem] leading-none align-bottom text-ink/30">"</span>
+        </p>
+      </blockquote>
+
+      <!-- Approach (moved into About) -->
+      <div class="mt-20 pt-12 border-t border-line">
+        <p class="text-base font-semibold uppercase tracking-[0.2em] text-accent">Our Approach</p>
+        <h3 class="mt-3 font-display text-4xl md:text-6xl font-bold leading-tight text-ink">
+          We don't just advise. We <span class="text-accent">engineer outcomes</span><span class="text-accent text-[1.3em] leading-none">.</span>
+        </h3>
+        <p class="mt-5 leading-relaxed text-body">
+          At Stone Grail, we bridge the critical gap between high-level strategy and ground-level execution. We treat every business challenge as a system design problem, ensuring our solutions are not just theoretically sound, but deeply integrated, financially viable, and structurally built to scale. We operate as a strategic extension of your leadership, driving transformation through a methodical, results-oriented framework.
+        </p>
+        <div class="mt-10 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-line bg-bg p-6 text-left">
+            <div class="font-display text-lg font-semibold text-ink">Diagnose &amp; Align</div>
+            <p class="mt-2 text-sm text-muted">Uncover root inefficiencies and map technology directly to core business objectives.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-bg p-6 text-left">
+            <div class="font-display text-lg font-semibold text-ink">Architect &amp; Design</div>
+            <p class="mt-2 text-sm text-muted">Build intelligent, future-proof frameworks tailored to your enterprise DNA.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-bg p-6 text-left">
+            <div class="font-display text-lg font-semibold text-ink">Execute &amp; Integrate</div>
+            <p class="mt-2 text-sm text-muted">Deploy AI-driven platforms and operational strategies with absolute precision.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-bg p-6 text-left">
+            <div class="font-display text-lg font-semibold text-ink">Scale &amp; Sustain</div>
+            <p class="mt-2 text-sm text-muted">Monitor performance, optimize workflows, and iterate to drive measurable, long-term impact.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-line"></div>
+          <div class="relative rounded-2xl border border-line bg-white p-6">
+            <div class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-bg border border-line font-display text-lg font-semibold text-ink">01</div>
+            <div class="mt-4 font-display text-xl font-semibold text-ink">Discover</div>
+            <p class="mt-2 text-sm text-muted">Real problem statements &amp; economic viability.</p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-white p-6">
+            <div class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-bg border border-line font-display text-lg font-semibold text-ink">02</div>
+            <div class="mt-4 font-display text-xl font-semibold text-ink">Architect</div>
+            <p class="mt-2 text-sm text-muted">Scalable tech &amp; revenue frameworks.</p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-white p-6">
+            <div class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-bg border border-line font-display text-lg font-semibold text-ink">03</div>
+            <div class="mt-4 font-display text-xl font-semibold text-ink">Co-build</div>
+            <p class="mt-2 text-sm text-muted">With industry stakeholders.</p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-white p-6">
+            <div class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-bg border border-line font-display text-lg font-semibold text-ink">04</div>
+            <div class="mt-4 font-display text-xl font-semibold text-ink">Deploy</div>
+            <p class="mt-2 text-sm text-muted">Measurable, lasting impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SERVICES -->
+  <section id="services" class="min-h-screen flex items-center py-24 bg-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-base font-semibold uppercase tracking-[0.2em] text-accent">Our Services</p>
+        <h2 class="mt-3 font-display text-4xl md:text-6xl font-bold leading-tight text-ink">
+          From system design to go-to-market — we <span class="text-accent">engineer sustainable growth systems</span> <span class="text-accent">end to end</span><span class="text-accent text-[1.3em] leading-none">.</span>
+        </h2>
+      </div>
+
+      <div class="mt-16 space-y-6">
+        <article class="group rounded-3xl border border-line bg-white p-8 md:p-10 transition hover:border-accent/40 hover:shadow-xl">
+          <div class="grid md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-3">
+              <div class="font-display text-6xl font-light text-line group-hover:text-ink/30 transition">01</div>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink">IT Consulting</h3>
+              <p class="mt-1 text-sm italic text-muted">We don't just implement systems. We design transformation.</p>
+            </div>
+            <div class="md:col-span-5">
+              <p class="leading-relaxed text-body">We deliver high-performance technology ecosystems powered by modern platforms and AI-driven intelligence — from scaling operations to modernizing legacy workflows and implementing CRM across regions.</p>
+            </div>
+            <div class="md:col-span-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">CRM / ERP architecture</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">AI workflow automation</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Intelligent CRM</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Managed services</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Data-led decisions</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Custom integrations</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-3xl border border-line bg-white p-8 md:p-10 transition hover:border-accent/40 hover:shadow-xl">
+          <div class="grid md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-3">
+              <div class="font-display text-6xl font-light text-line group-hover:text-ink/30 transition">02</div>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink">Innovation Building</h3>
+              <p class="mt-1 text-sm italic text-muted">We don't chase trends. We build relevance.</p>
+            </div>
+            <div class="md:col-span-5">
+              <p class="leading-relaxed text-body">Stone Grail collaborates with industry partners to build solutions that address real-world inefficiencies using modern technology stacks.</p>
+            </div>
+            <div class="md:col-span-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Problem statements</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Economic viability</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Scalable frameworks</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Co-build stakeholders</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Measurable impact</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-3xl border border-line bg-white p-8 md:p-10 transition hover:border-accent/40 hover:shadow-xl">
+          <div class="grid md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-3">
+              <div class="font-display text-6xl font-light text-line group-hover:text-ink/30 transition">03</div>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink">Business Consulting</h3>
+              <p class="mt-1 text-sm italic text-muted">Real Problems. Real Solutions. Built With Technology.</p>
+            </div>
+            <div class="md:col-span-5">
+              <p class="leading-relaxed text-body">Technology without strategy is noise. We align growth with financial precision and revenue architecture — partnering as strategic operators from ideation to scale.</p>
+            </div>
+            <div class="md:col-span-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">SME model structuring</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Financial planning</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Sales strategy</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">GTM execution</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Scalability models</span>
+                <span class="rounded-full bg-bg px-3 py-1.5 text-xs font-medium text-body">Founder advisory</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT BANNER -->
+  <section id="contact" class="py-12 bg-bg border-t border-line">
+    <div class="mx-auto max-w-7xl px-6 text-center">
+      <p class="text-base font-semibold uppercase tracking-[0.2em] text-accent">Talk to Our Strategy Team</p>
+      <h2 class="mt-1 font-display text-4xl md:text-6xl font-bold text-ink">Let's engineer <span class="text-accent">your next growth system</span><span class="text-accent text-[1.3em] leading-none">.</span></h2>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="mailto:ddutta@stonegrail.com" class="rounded-full border border-line bg-white px-5 py-2.5 text-sm font-medium text-ink hover:border-ink transition">ddutta@stonegrail.com</a>
+        <a href="tel:+919848275851" class="rounded-full border border-line bg-white px-5 py-2.5 text-sm font-medium text-ink hover:border-ink transition">+91 9848275851</a>
+        <a href="mailto:ddutta@stonegrail.com" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent transition">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-line py-8 text-muted">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Stone Grail logo" class="h-14 w-14 object-contain" />
+            <span class="font-display text-xl font-semibold text-ink">Stone Grail</span>
+          </div>
+          <p class="mt-4 text-sm text-muted max-w-xs">Global ambition. Precision execution. Real-world impact.</p>
+        </div>
+        <div class="md:col-span-2">
+          <div class="text-xs font-semibold uppercase tracking-widest text-ink">Company</div>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li><a href="#about" class="hover:text-ink transition">About</a></li>
+            <li><a href="#services" class="hover:text-ink transition">Services</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <div class="text-xs font-semibold uppercase tracking-widest text-ink">Services</div>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li>IT Consulting</li>
+            <li>Innovation Building</li>
+            <li>Business Consulting</li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <div class="text-xs font-semibold uppercase tracking-widest text-ink">Contact</div>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li><a href="mailto:ddutta@stonegrail.com" class="hover:text-ink transition">ddutta@stonegrail.com</a></li>
+            <li><a href="tel:+919848275851" class="hover:text-ink transition">+91 9848275851</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-line flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-muted">
+        <div>© 2026 Stone Grail Technologies Private Limited. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="terms.html" class="hover:text-ink transition">Terms &amp; Conditions</a>
+          <a href="terms.html#disclaimer" class="hover:text-ink transition">Disclaimer</a>
+          <a href="#" class="hover:text-ink transition">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

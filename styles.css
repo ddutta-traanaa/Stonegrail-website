@@ -1,0 +1,39 @@
+:root {
+  --ink: #0B1220;
+  --accent: #4F46E5;
+}
+
+html { scroll-behavior: smooth; }
+body { font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Card hover lift */
+.group { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+
+/* Service tabs */
+.svc-tab.active { border-color: #4F46E5; background: #EEF2FF; }
+.svc-tab.active svg { color: #4F46E5; transform: translateX(4px); }
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,.15);
+  outline: none;
+}
+
+/* Marquee */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 30s linear infinite; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee { animation: none; }
+}
